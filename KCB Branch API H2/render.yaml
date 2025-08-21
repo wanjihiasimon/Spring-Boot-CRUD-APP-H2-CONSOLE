@@ -4,6 +4,6 @@ services:
     env: docker
     plan: free
     region: oregon
-    dockerfilePath: ./KCB Branch API H2/Dockerfile   # 👈 correct path
-    buildContext: ./KCB Branch API H2                # 👈 set build context to subfolder
+    dockerfilePath: "./KCB Branch API H2/Dockerfile" # 👈 correct path
+    buildContext: "./KCB Branch API H2"                # 👈 set build context to subfolder
     autoDeploy: true
