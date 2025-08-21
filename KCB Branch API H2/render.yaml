@@ -4,11 +4,6 @@ services:
     env: docker
     plan: free
     region: oregon
-    dockerfilePath: ./Dockerfile   # Dockerfile is at repo root
-    buildContext: .                # Build from root so it sees "KCB Branch API H2"
+    dockerfilePath: ./KCB Branch API H2/Dockerfile   # 👈 correct path
+    buildContext: ./KCB Branch API H2                # 👈 set build context to subfolder
     autoDeploy: true
-    envVars:
-      - key: JAVA_OPTS
-        value: "-Xmx512m"
-    healthCheckPath: /actuator/health  # adjust if actuator not enabled
-
