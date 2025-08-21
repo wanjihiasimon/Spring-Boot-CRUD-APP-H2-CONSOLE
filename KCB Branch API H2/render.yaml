@@ -3,9 +3,10 @@ services:
     name: spring-boot-crud-app-h2-console
     env: docker
     plan: free
-    dockerfilePath: KCB Branch API H2/Dockerfile
-    autoDeploy: true
     region: oregon   # or nearest region
+    dockerfilePath: KCB Branch API H2/Dockerfile
+    buildContext: ./KCB Branch API H2
+    autoDeploy: true
     envVars:
       - key: JAVA_OPTS
         value: "-Xmx512m"
