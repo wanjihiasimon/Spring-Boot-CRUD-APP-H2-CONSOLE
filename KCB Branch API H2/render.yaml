@@ -3,7 +3,7 @@ services:
     name: spring-boot-crud-app-h2-console
     env: docker
     plan: free
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: KCB Branch API H2/Dockerfile
     autoDeploy: true
     region: oregon   # or nearest region
     envVars:
