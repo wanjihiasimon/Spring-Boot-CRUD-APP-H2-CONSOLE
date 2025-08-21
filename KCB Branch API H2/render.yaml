@@ -1,11 +1,12 @@
 services:
   - type: web
-    name: kcb-branch-api-h2
+    name: spring-boot-crud-app-h2-console
     env: docker
     plan: free
-    branch: main
-    autoDeploy: true
     dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    region: oregon   # or nearest region
     envVars:
       - key: JAVA_OPTS
         value: "-Xmx512m"
+    healthCheckPath: /actuator/health  # change/remove if not using actuator
