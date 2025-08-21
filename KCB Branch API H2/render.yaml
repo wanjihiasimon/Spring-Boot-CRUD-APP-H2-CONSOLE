@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kcb-branch-api-h2
+    env: docker
+    plan: free
+    branch: main
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: JAVA_OPTS
+        value: "-Xmx512m"
